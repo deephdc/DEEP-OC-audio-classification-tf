@@ -59,7 +59,7 @@ RUN wget https://downloads.rclone.org/rclone-current-linux-amd64.deb && \
 #    rm -rf /tmp/*
 
 # Temporarily install WIP_v2 branch of DEEPaaS
-RUN git clone -b WIP/api_v2 https://github.com/indigo-dc/deepaas && \
+RUN git clone https://github.com/indigo-dc/deepaas && \
     cd deepaas && \
     pip install --no-cache-dir -e . && \
     rm -rf /root/.cache/pip/* && \
