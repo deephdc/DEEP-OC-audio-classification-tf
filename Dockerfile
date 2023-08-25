@@ -104,7 +104,7 @@ RUN git clone -b $branch https://github.com/deephdc/audio-classification-tf && \
     cd ..
 
 # Download network weights: compressing with tar.xz gives decompression errors (corrupt data)
-ENV SWIFT_CONTAINER https://cephrgw01.ifca.es:8080/swift/v1/audio-classification-tf/
+ENV SWIFT_CONTAINER https://api.cloud.ifca.es:8080/swift/v1/audio-classification-tf/
 ENV MODEL_TAR default.tar.gz
 
 RUN curl --insecure -o ./audio-classification-tf/models/${MODEL_TAR} \
